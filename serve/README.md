@@ -10,7 +10,7 @@
 registerMicroApps([
   { 
     name: 'app-vue-hash', 
-    entry: 'http://127.0.0.1:9001', 
+    entry: '/child/vue-hash/', 
     container: '#appContainer', 
     activeRule: '/app-vue-hash', 
     props: { data : { store, router } }

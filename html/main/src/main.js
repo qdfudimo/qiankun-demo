@@ -23,7 +23,7 @@ new Vue({
 console.log(process.env.NODE_ENV);
 registerMicroApps([{
     name: 'app-vue-hash',
-    entry: process.env.NODE_ENV == "development" ? "http://localhost:1111" : 'http://127.0.0.1:9001',
+    entry: process.env.NODE_ENV == "development" ? "http://localhost:1111" : '/child/vue-hash/',
     container: '#appContainer',
     activeRule: '/app-vue-hash',
     props: {

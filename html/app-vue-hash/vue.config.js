@@ -7,7 +7,7 @@ module.exports = {
       'Access-Control-Allow-Origin': '*',
     },
   },
-  // publicPath:"/vue-hash/",
+  publicPath:"/child/vue-hash/",
   // outputDir:"production",
   // assetsDir:"production-sub-path",
   chainWebpack: (config) => {
