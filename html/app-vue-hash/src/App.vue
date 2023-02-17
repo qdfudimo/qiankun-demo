@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
+      <button @click="handel">测试webworker</button>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
       <p>a链接跳转到主项目/其他子项目的页面，页面会刷新，效果不好<a href="/about">parent About</a></p>
@@ -15,6 +16,7 @@
 </template>
 
 <script>
+const worker = new Worker("/file.worker.js")
 export default {
   data() {
     return {
@@ -25,6 +27,9 @@ export default {
     goToPage(path){
       console.log(this.$root.parentRouter);
       this.$root.parentRouter.push(path);
+    },
+    handel(){
+      worker.postMessage("富爸爸发的")
     }
   },
 }
